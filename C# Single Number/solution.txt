@@ -1,0 +1,14 @@
+public class Solution {
+    public int SingleNumber(int[] nums) {
+        var groups = nums.GroupBy(v => v);
+        foreach (var group in groups)
+        {
+            //Console.WriteLine(group.Value);
+            if (group.Count() < 2)
+            {
+                return group.Key;
+            }
+        }
+        return 0;
+    }
+}

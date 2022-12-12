@@ -1,0 +1,16 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumbers = function(nums) {
+    var count = 0
+    for (var i = 0; i < nums.length; i++)
+        {
+            var number = nums[i].toString().length;
+            if (number%2 == 0)
+                {
+                    count++;
+                }
+        }
+    return count;
+};

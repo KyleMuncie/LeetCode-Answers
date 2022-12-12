@@ -1,0 +1,21 @@
+public class Solution {
+    public bool IsAnagram(string s, string t) {
+        if (s.Length == t.Length)
+        {
+            string newS = String.Concat(s.OrderBy(c => c));
+            string newT = String.Concat(t.OrderBy(d => d));
+            if (newS == newT)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+}

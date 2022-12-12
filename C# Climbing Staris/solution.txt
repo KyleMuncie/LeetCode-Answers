@@ -1,0 +1,30 @@
+public class Solution {
+    
+    public int ClimbStairs(int n) {
+        var previous = 0;
+        var current = 1;
+        var num = 0;
+        var extra = 0;
+        if (n == 1)
+        { return 1; }
+        while (n != current)
+        {
+            if (current == 1)
+            {
+                num = current + previous;
+                previous = num;
+                current++;     
+            }
+            else
+            {
+                extra = previous-extra;
+                num = num + extra;
+                previous = num;
+                current++;
+            }    
+        }
+        extra = previous - extra;
+        num = num + extra;
+        return num;
+    }
+}

@@ -1,0 +1,13 @@
+public class Solution {
+    public IList<int> FindDisappearedNumbers(int[] nums) {
+        List<int> missing = new List<int>();
+        for (var i = 1; i <= nums.Length; i++)
+        {
+            if (Array.IndexOf(nums, i) < 0)
+            {
+                missing.Add(i);
+            }
+        }
+        return missing;
+    }
+}

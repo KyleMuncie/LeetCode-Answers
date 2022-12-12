@@ -1,0 +1,16 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function(nums) {
+    var nums1 = [];
+    var nums2 = [];
+    for (var i = 0; i < nums.length; i++)
+        {
+            nums1[i] = nums[i] * nums[i];
+        }
+    nums1.sort(function(a, b){
+        return a - b;
+    });
+    return nums1;
+};
